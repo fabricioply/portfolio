@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Fabricio Dias Galvao — Desenvolvedor Full-Stack, Mobile e Game. Criador do Swipie. Sao Paulo, Brasil.">
+  <meta name="author" content="Fabricio Dias Galvao">
+  <title>Fabricio Dias — Dev Full-Stack, Mobile e Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+  <canvas id="particles"></canvas>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="#hero" class="nav-logo">FD</a>
+    <ul class="nav-links">
+      <li><a href="#trajetoria">Trajetoria</a></li>
+      <li><a href="#swipie">Swipie</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#hardware">Hardware</a></li>
+      <li><a href="#tech">Stack</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <span class="hero-tag">São Paulo, Brasil</span>
+    <h1>
+      E aí, eu sou o<br>
+      <span class="glow holo">Fabricio Dias</span>
+    </h1>
+    <p class="hero-typed"><span id="typed"></span><span class="cursor">|</span></p>
+    <div class="hero-cta">
+      <a href="#swipie" class="btn btn-glow">Conhecer o Swipie</a>
+      <a href="https://wa.me/5511959377959" target="_blank" class="btn btn-whatsapp">
+        <i class="devicon-whatsapp-plain"></i>
+        WhatsApp
+      </a>
+      <a href="mailto:fabriciodgalvao@gmail.com" class="btn btn-ghost">
+        <i class="devicon-google-plain"></i>
+        E-mail
+      </a>
+      <a href="https://linkedin.com/in/fabricio-dias-galvao" target="_blank" class="btn btn-ghost">
+        <i class="devicon-linkedin-plain"></i>
+        LinkedIn
+      </a>
+    </div>
+    <div class="scroll-hint"><span></span></div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section id="trajetoria">
+    <h2 class="stitle fade-in">Trajetória</h2>
+    <p class="ssub fade-in">Do hardware ao código — clique em cada etapa</p>
+    <div class="timeline fade-in">
+      <div class="tl-item">
+        <div class="tl-date">2012 — Onde tudo começou</div>
+        <div class="tl-role">Primeiro contato com tecnologia</div>
+        <div class="tl-company">Autodidata — 13 anos</div>
+        <div class="tl-desc">Comecei fuçando computadores, montando e desmontando peças, formatando máquinas da família
+          e dos vizinhos. Foi aí que nasceu a paixão por entender como as coisas funcionam por dentro.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov 2021 — Abr 2022</div>
+        <div class="tl-role">Técnico de TI</div>
+        <div class="tl-company">Teclabel Soluções Industriais</div>
+        <div class="tl-desc">Instalação e configuração de hardware e software em ambiente industrial. Aplicação de
+          diretrizes de conformidade com RGPD. Primeiro emprego formal na área, saí do hobby pro mercado.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Set 2022 — Jan 2024</div>
+        <div class="tl-role">Estagiário de TI</div>
+        <div class="tl-company">TRR Seguros</div>
+        <div class="tl-desc">Administração de sistemas e infraestrutura via Controlador de Domínio. Diagnóstico e reparo
+          de equipamentos em ambiente corporativo. Aqui aprendi a lidar com pressão e SLA de verdade.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jan 2024</div>
+        <div class="tl-role">Analista de Sistemas</div>
+        <div class="tl-company">TRR Seguros</div>
+        <div class="tl-desc">Promovido a analista. Gerenciamento de Active Directory e manutenção avançada de hardware,
+          regravação de BIOS, reparos eletrônicos, gestão de rede corporativa.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Jan 2024 — Mai 2026</div>
+        <div class="tl-role">Analista de Desenvolvimento I</div>
+        <div class="tl-company">Alper Seguros — Remoto</div>
+        <div class="tl-desc">Sustentação e desenvolvimento em PHP. Automações em Python que cortaram trabalho manual. QA
+          do projeto VC+ Seguro. Suporte com Python e Vue.js. Sustentação da plataforma Alper Cargo. Aqui virei dev de
+          verdade.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021 — 2023</div>
+        <div class="tl-role">Análise e Desenvolvimento de Sistemas</div>
+        <div class="tl-company">UniFECAF — Concluído</div>
+        <div class="tl-desc">Graduação completa em ADS. Base sólida em lógica, estrutura de dados, banco de dados e
+          engenharia de software.</div>
+        <div class="tl-hint">clique para expandir</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWIPIE -->
+  <section id="swipie">
+    <h2 class="stitle fade-in">Swipie</h2>
+    <p class="ssub fade-in">Meu maior projeto — um Tinder de filmes</p>
+    <div class="swipie-section fade-in">
+      <div class="swipie-info">
+        <h3>Que filme a gente assiste hoje?</h3>
+        <div class="badge-row">
+          <span class="sbadge sbadge-gplay">Google Play</span>
+          <span class="sbadge sbadge-ios">iOS (Web)</span>
+          <span class="sbadge sbadge-dev">App Store em breve</span>
+        </div>
+        <p>Sabe aquela briga pra escolher filme? O <strong>Swipie</strong> resolve isso. Crie uma party, chame o grupo,
+          e de swipe nos filmes. Quando todo mundo curtir o mesmo, e match.</p>
+        <p>Tem roleta pra quando a indecisão bater, feed social pra ver o que seus amigos estão assistindo, e tudo
+          funciona em tempo real com Socket.io.</p>
+        <p>O app já está na <strong>Google Play</strong> pro Android e no iOS funciona como web app. O lançamento na
+          <strong>App Store</strong> está nos planos, estamos nos passos finais do desenvolvimento.
+        </p>
+        <div class="swipie-stack">
+          <span>TypeScript</span><span>React</span><span>Vite</span><span>Tailwind</span><span>Node.js</span><span>Express</span><span>Socket.io</span><span>MongoDB</span><span>Firebase</span><span>Capacitor</span><span>Stripe</span><span>RevenueCat</span><span>Docker</span><span>Cloud
+            Run</span>
+        </div>
+        <br>
+        <a href="https://swipie.com.br" target="_blank" class="btn btn-glow" style="margin-top:8px">Conhecer o
+          Swipie</a>
+      </div>
+      <div>
+        <div class="swipe-demo" id="swipe-deck"></div>
+        <p class="swipe-hint">arraste os cards para os lados</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <h2 class="stitle fade-in">Outros Projetos</h2>
+    <p class="ssub fade-in">Clique em qualquer card para ver o projeto em ação</p>
+    <div class="proj-grid fade-in">
+      <div class="proj-card" data-modal="vexel">
+        <h3>Vexel</h3>
+        <span class="proj-status status-frozen">Congelado</span>
+        <p>Plataforma GameOps para gerenciamento de equipe de desenvolvimento de jogos. Tarefas, concept arts, modelos
+          3D, história, votações. Projeto pausado, mas pode ser revivido a qualquer momento.</p>
+        <div class="proj-tags"><span>Web App</span><span>GameOps</span><span>Gerenciamento</span></div>
+        <span class="proj-cta">Ver quadro de tarefas</span>
+      </div>
+      <div class="proj-card" data-modal="bugshooter">
+        <h3>Bug Shooter</h3>
+        <span class="proj-status status-live">Jogável</span>
+        <p>Mini-game feito com Canvas API puro. Você é um dev destruindo bugs com upgrades de DevOps: MultiShot, Replica
+          Set, Auto-Scaler, Load Balancer e Production Deploy.</p>
+        <div class="proj-tags"><span>JavaScript</span><span>Canvas API</span><span>HTML5</span><span>Game Design</span>
+        </div>
+        <span class="proj-cta">Jogar agora</span>
+      </div>
+      <div class="proj-card" data-modal="mgc">
+        <h3>MGC Representações</h3>
+        <span class="proj-status status-done">Entregue</span>
+        <p>Site institucional para cliente. O desafio? O cliente queria WordPress. Entreguei dentro das limitações da
+          plataforma — tema custom, responsivo e funcional.</p>
+        <div class="proj-tags"><span>PHP</span><span>WordPress</span><span>Custom Theme</span><span>CSS</span></div>
+        <span class="proj-cta">Ver catálogo de marcas</span>
+      </div>
+      <div class="proj-card mc-card" data-modal="auth">
+        <h3>AuthPlugin</h3>
+        <span class="proj-status status-done">Completo</span>
+        <p>Plugin de autenticação para servidores Minecraft. Login, registro e segurança de contas de jogadores.</p>
+        <div class="proj-tags"><span>Java</span><span>Bukkit API</span><span>Minecraft</span></div>
+        <span class="proj-cta" style="font-family:var(--pixel);font-size:.5rem;color:var(--gold)">Abrir console</span>
+      </div>
+      <div class="proj-card mc-card" data-modal="discord">
+        <h3>DiscordChat</h3>
+        <span class="proj-status status-done">Completo</span>
+        <p>Ponte entre chat do servidor Minecraft e Discord. Mensagens sincronizadas em tempo real.</p>
+        <div class="proj-tags"><span>Java</span><span>Discord API</span><span>Bukkit</span></div>
+        <span class="proj-cta" style="font-family:var(--pixel);font-size:.5rem;color:var(--gold)">Ver chat ao
+          vivo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HARDWARE -->
+  <section id="hardware">
+    <h2 class="stitle fade-in">Manutenção de Hardware</h2>
+    <p class="ssub fade-in">Clique nas habilidades para montar o PC</p>
+    <div class="hw-exploded-layout fade-in">
+      <!-- PC Exploded View -->
+      <div class="hw-pc-container">
+        <div class="hw-pc" id="hw-pc">
+          <!-- Case -->
+          <div class="hw-layer hw-case" data-part="case">
+            <svg viewBox="0 0 280 400" fill="none">
+              <rect x="10" y="10" width="260" height="380" rx="12" stroke="rgba(255,255,255,.15)" stroke-width="2"
+                fill="rgba(255,255,255,.02)" />
+              <rect x="20" y="20" width="240" height="250" rx="6" stroke="rgba(255,255,255,.08)" stroke-width="1"
+                fill="rgba(255,255,255,.01)" />
+              <circle cx="140" cy="350" r="18" stroke="rgba(255,255,255,.1)" stroke-width="1" fill="none" />
+              <line x1="122" y1="350" x2="158" y2="350" stroke="rgba(255,255,255,.08)" stroke-width="1" />
+              <rect x="230" y="290" width="20" height="60" rx="3" stroke="rgba(255,255,255,.08)" stroke-width="1"
+                fill="none" />
+              <rect x="230" y="296" width="20" height="6" rx="1" fill="rgba(255,255,255,.04)" />
+              <rect x="230" y="310" width="20" height="6" rx="1" fill="rgba(255,255,255,.04)" />
+              <rect x="230" y="324" width="20" height="6" rx="1" fill="rgba(255,255,255,.04)" />
+            </svg>
+          </div>
+          <!-- Motherboard -->
+          <div class="hw-layer hw-mb" data-part="mb">
+            <svg viewBox="0 0 220 240" fill="none">
+              <rect x="5" y="5" width="210" height="230" rx="4" fill="rgba(0,80,40,.3)" stroke="rgba(0,200,100,.25)"
+                stroke-width="1.5" />
+              <circle cx="15" cy="15" r="4" fill="rgba(0,200,100,.2)" />
+              <circle cx="205" cy="15" r="4" fill="rgba(0,200,100,.2)" />
+              <circle cx="15" cy="225" r="4" fill="rgba(0,200,100,.2)" />
+              <circle cx="205" cy="225" r="4" fill="rgba(0,200,100,.2)" />
+              <line x1="30" y1="120" x2="190" y2="120" stroke="rgba(0,200,100,.12)" stroke-width=".5" />
+              <line x1="110" y1="30" x2="110" y2="210" stroke="rgba(0,200,100,.12)" stroke-width=".5" />
+              <rect x="80" y="180" width="60" height="20" rx="2" stroke="rgba(0,200,100,.15)" stroke-width="1"
+                fill="none" />
+              <rect x="30" y="40" width="30" height="50" rx="2" stroke="rgba(0,200,100,.15)" stroke-width="1"
+                fill="none" />
+            </svg>
+          </div>
+          <!-- CPU -->
+          <div class="hw-layer hw-cpu" data-part="cpu">
+            <svg viewBox="0 0 80 80" fill="none">
+              <rect x="10" y="10" width="60" height="60" rx="4" fill="rgba(120,120,140,.4)"
+                stroke="rgba(200,200,220,.3)" stroke-width="1.5" />
+              <rect x="20" y="20" width="40" height="40" rx="2" fill="rgba(80,80,100,.5)" stroke="rgba(150,150,170,.3)"
+                stroke-width="1" />
+              <line x1="15" y1="0" x2="15" y2="10" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="30" y1="0" x2="30" y2="10" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="50" y1="0" x2="50" y2="10" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="65" y1="0" x2="65" y2="10" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="15" y1="70" x2="15" y2="80" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="30" y1="70" x2="30" y2="80" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="50" y1="70" x2="50" y2="80" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+              <line x1="65" y1="70" x2="65" y2="80" stroke="rgba(200,200,220,.2)" stroke-width="2" />
+            </svg>
+          </div>
+          <!-- RAM -->
+          <div class="hw-layer hw-ram" data-part="ram">
+            <svg viewBox="0 0 120 24" fill="none">
+              <rect x="2" y="2" width="116" height="20" rx="2" fill="rgba(0,100,200,.25)" stroke="rgba(0,180,255,.3)"
+                stroke-width="1" />
+              <rect x="10" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="22" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="34" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="46" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="62" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="74" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="86" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+              <rect x="98" y="6" width="8" height="12" rx="1" fill="rgba(0,180,255,.15)" />
+            </svg>
+          </div>
+          <!-- GPU -->
+          <div class="hw-layer hw-gpu" data-part="gpu">
+            <svg viewBox="0 0 200 60" fill="none">
+              <rect x="2" y="2" width="196" height="56" rx="4" fill="rgba(100,40,0,.3)" stroke="rgba(255,150,0,.25)"
+                stroke-width="1.5" />
+              <rect x="12" y="12" width="36" height="36" rx="2" fill="rgba(255,150,0,.12)" stroke="rgba(255,150,0,.2)"
+                stroke-width="1" />
+              <rect x="56" y="12" width="36" height="36" rx="2" fill="rgba(255,150,0,.12)" stroke="rgba(255,150,0,.2)"
+                stroke-width="1" />
+              <rect x="100" y="8" width="90" height="8" rx="2" fill="rgba(255,150,0,.08)" />
+              <rect x="100" y="22" width="90" height="8" rx="2" fill="rgba(255,150,0,.08)" />
+              <rect x="100" y="36" width="70" height="8" rx="2" fill="rgba(255,150,0,.08)" />
+            </svg>
+          </div>
+          <!-- SSD -->
+          <div class="hw-layer hw-ssd" data-part="ssd">
+            <svg viewBox="0 0 70 50" fill="none">
+              <rect x="2" y="2" width="66" height="46" rx="4" fill="rgba(60,0,100,.3)" stroke="rgba(168,85,247,.3)"
+                stroke-width="1.5" />
+              <rect x="10" y="10" width="30" height="20" rx="2" fill="rgba(168,85,247,.12)" stroke="rgba(168,85,247,.2)"
+                stroke-width="1" />
+              <text x="50" y="24" fill="rgba(168,85,247,.3)" font-size="8" font-family="monospace">SSD</text>
+              <rect x="10" y="35" width="50" height="4" rx="1" fill="rgba(168,85,247,.1)" />
+            </svg>
+          </div>
+          <!-- PSU -->
+          <div class="hw-layer hw-psu" data-part="psu">
+            <svg viewBox="0 0 180 60" fill="none">
+              <rect x="2" y="2" width="176" height="56" rx="4" fill="rgba(100,100,0,.2)" stroke="rgba(255,215,0,.25)"
+                stroke-width="1.5" />
+              <circle cx="35" cy="30" r="18" stroke="rgba(255,215,0,.2)" stroke-width="1" fill="none" />
+              <line x1="35" y1="12" x2="35" y2="48" stroke="rgba(255,215,0,.1)" stroke-width=".5" />
+              <line x1="17" y1="30" x2="53" y2="30" stroke="rgba(255,215,0,.1)" stroke-width=".5" />
+              <rect x="70" y="14" width="40" height="8" rx="2" fill="rgba(255,215,0,.08)" />
+              <rect x="70" y="26" width="60" height="8" rx="2" fill="rgba(255,215,0,.08)" />
+              <rect x="70" y="38" width="30" height="8" rx="2" fill="rgba(255,215,0,.08)" />
+              <text x="140" y="34" fill="rgba(255,215,0,.2)" font-size="10" font-family="monospace">750W</text>
+            </svg>
+          </div>
+          <!-- Boot Screen -->
+          <div class="hw-screen" id="hw-screen">
+            <!-- Phase 1: BIOS POST -->
+            <div class="hw-bios" id="hw-bios">
+              <div class="bios-header">American Megatrends BIOS v2.61</div>
+              <div class="bios-line" data-delay="200">CPU: Intel Core i7-4770K @ 3.50GHz</div>
+              <div class="bios-line" data-delay="500">Memory Test: 16384 MB OK</div>
+              <div class="bios-line" data-delay="900">Detecting IDE Primary Master... SSD 500GB</div>
+              <div class="bios-line" data-delay="1200">Detecting IDE Primary Slave... None</div>
+              <div class="bios-line" data-delay="1500">GPU: NVIDIA GeForce GTX 1070</div>
+              <div class="bios-line" data-delay="1900">USB Devices: 3 found</div>
+              <div class="bios-line bios-ok" data-delay="2300">All systems passed.</div>
+              <div class="bios-line bios-prompt" data-delay="2700">Booting from SSD...</div>
+            </div>
+            <!-- Phase 2: XP Loading -->
+            <div class="hw-xp-load" id="hw-xp-load">
+              <div class="xp-flag">
+                <div class="xp-flag-block xp-r"></div>
+                <div class="xp-flag-block xp-g"></div>
+                <div class="xp-flag-block xp-b"></div>
+                <div class="xp-flag-block xp-y"></div>
+              </div>
+              <div class="xp-title">Microsoft<span>Windows</span><em>XP</em></div>
+              <div class="xp-loader">
+                <div class="xp-loader-blocks">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <!-- Phase 3: XP Desktop -->
+            <div class="hw-xp-desktop" id="hw-xp-desktop">
+              <div class="xp-wallpaper">
+                <div class="xp-cloud xp-cloud-1"></div>
+                <div class="xp-cloud xp-cloud-2"></div>
+              </div>
+              <div class="xp-icons">
+                <div class="xp-icon">
+                  <div class="xp-icon-img xp-icon-pc"></div>
+                  <span>Meu Computador</span>
+                </div>
+                <div class="xp-icon">
+                  <div class="xp-icon-img xp-icon-folder"></div>
+                  <span>Portfolio</span>
+                </div>
+                <div class="xp-icon">
+                  <div class="xp-icon-img xp-icon-bin"></div>
+                  <span>Lixeira</span>
+                </div>
+              </div>
+              <div class="xp-taskbar">
+                <div class="xp-start">
+                  <div class="xp-start-flag"></div>
+                  iniciar
+                </div>
+                <div class="xp-tray">
+                  <span class="xp-tray-time" id="xp-clock">15:34</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Skills list -->
+      <div class="hw-skills">
+        <div class="hw-skill" data-target="case">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+              <circle cx="12" cy="20" r=".5" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Gabinete e Montagem</h4>
+            <p>Montagem e desmontagem completa de desktops, organização de cabeamento e gestão de ventilação</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="mb">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="1" />
+              <circle cx="7" cy="7" r="1.5" />
+              <circle cx="17" cy="7" r="1.5" />
+              <circle cx="7" cy="17" r="1.5" />
+              <circle cx="17" cy="17" r="1.5" />
+              <line x1="10" y1="12" x2="14" y2="12" />
+              <line x1="12" y1="10" x2="12" y2="14" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Placa-Mãe e BIOS</h4>
+            <p>Regravação de BIOS, diagnóstico de curtos, troca de capacitores e configuração de chipsets</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="cpu">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="6" width="12" height="12" rx="1" />
+              <rect x="9" y="9" width="6" height="6" />
+              <line x1="9" y1="3" x2="9" y2="6" />
+              <line x1="15" y1="3" x2="15" y2="6" />
+              <line x1="9" y1="18" x2="9" y2="21" />
+              <line x1="15" y1="18" x2="15" y2="21" />
+              <line x1="3" y1="9" x2="6" y2="9" />
+              <line x1="3" y1="15" x2="6" y2="15" />
+              <line x1="18" y1="9" x2="21" y2="9" />
+              <line x1="18" y1="15" x2="21" y2="15" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Processador</h4>
+            <p>Aplicação de pasta térmica, instalação de coolers e troubleshooting de superaquecimento</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="ram">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="8" width="20" height="8" rx="1" />
+              <rect x="5" y="10" width="3" height="4" rx=".5" />
+              <rect x="10" y="10" width="3" height="4" rx=".5" />
+              <rect x="15" y="10" width="3" height="4" rx=".5" />
+              <line x1="6" y1="16" x2="6" y2="18" />
+              <line x1="12" y1="16" x2="12" y2="18" />
+              <line x1="18" y1="16" x2="18" y2="18" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Memória RAM</h4>
+            <p>Diagnóstico com MemTest, configuração de dual-channel e troubleshooting de blue screen</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="gpu">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="6" width="20" height="12" rx="2" />
+              <rect x="5" y="9" width="5" height="6" rx="1" />
+              <rect x="12" y="9" width="5" height="6" rx="1" />
+              <line x1="20" y1="10" x2="22" y2="10" />
+              <line x1="20" y1="14" x2="22" y2="14" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Placa de Vídeo</h4>
+            <p>Instalação, diagnóstico de artefatos gráficos e reparo em nível de componente</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="ssd">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="5" width="16" height="14" rx="2" />
+              <rect x="7" y="8" width="6" height="5" rx="1" />
+              <line x1="7" y1="16" x2="17" y2="16" />
+              <circle cx="16" cy="10" r="1" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Armazenamento</h4>
+            <p>Recuperação de dados, clonagem de discos, setup de RAID e migração HDD para SSD/NVMe</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-skill" data-target="psu">
+          <div class="hw-skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="6" width="18" height="12" rx="2" />
+              <circle cx="9" cy="12" r="4" />
+              <line x1="9" y1="8" x2="9" y2="16" />
+              <line x1="5" y1="12" x2="13" y2="12" />
+              <line x1="16" y1="10" x2="18" y2="10" />
+              <line x1="16" y1="14" x2="18" y2="14" />
+            </svg>
+          </div>
+          <div class="hw-skill-info">
+            <h4>Fonte de Alimentação</h4>
+            <p>Teste com multímetro, diagnóstico de proteções OCP/OVP e dimensionamento de potência</p>
+          </div>
+          <div class="hw-skill-check"></div>
+        </div>
+        <div class="hw-progress-bar">
+          <div class="hw-progress-fill" id="hw-fill"></div>
+        </div>
+        <div class="hw-status" id="hw-status">Selecione uma habilidade para montar</div>
+      </div>
+    </div>
+    <p class="hw-footnote fade-in">Desde os 13 anos mexendo com hardware — de formatar o PC da família até regravar BIOS
+      em ambiente corporativo</p>
+  </section>
+
+  <!-- TECH -->
+  <section id="tech">
+    <h2 class="stitle fade-in">Tech Stack</h2>
+    <p class="ssub fade-in">As ferramentas do dia a dia</p>
+    <div class="tech-grid fade-in">
+      <div class="tech-item"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+          alt="TypeScript"><span>TypeScript</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+          alt="Python"><span>Python</span></div>
+      <div class="tech-item"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript"><span>JavaScript</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+          alt="Java"><span>Java</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+          alt="PHP"><span>PHP</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          alt="React"><span>React</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+          alt="Vue.js"><span>Vue.js</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          alt="Node.js"><span>Node.js</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+          alt="Express"><span>Express</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+          alt="MongoDB"><span>MongoDB</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+          alt="Firebase"><span>Firebase</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+          alt="Docker"><span>Docker</span></div>
+      <div class="tech-item"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+          alt="Google Cloud"><span>Cloud</span></div>
+      <div class="tech-item"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
+          alt="Socket.io"><span>Socket.io</span></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+          alt="WordPress"><span>WordPress</span></div>
+      <div class="tech-item"><img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+          alt="Tailwind"><span>Tailwind</span></div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2 class="stitle fade-in">Contato</h2>
+    <p class="ssub fade-in">Bora bater um papo?</p>
+    <div class="terminal fade-in">
+      <div class="terminal-header">
+        <div class="dot r"></div>
+        <div class="dot y"></div>
+        <div class="dot g"></div>
+        <span>fabricio@dev:~</span>
+      </div>
+      <div class="terminal-body">
+        <span class="prompt">$</span> cat contato.json<br><br>
+        {<br>
+        &nbsp;&nbsp;"email": "<a href="mailto:fabriciodgalvao@gmail.com">fabriciodgalvao@gmail.com</a>",<br>
+        &nbsp;&nbsp;"whatsapp": "<a href="https://wa.me/5511959377959" target="_blank">wa.me/5511959377959</a>",<br>
+        &nbsp;&nbsp;"github": "<a href="https://github.com/fabricioply" target="_blank">github.com/fabricioply</a>",<br>
+        &nbsp;&nbsp;"linkedin": "<a href="https://linkedin.com/in/fabricio-dias-galvao"
+          target="_blank">linkedin.com/in/fabricio-dias-galvao</a>",<br>
+        &nbsp;&nbsp;"status": "disponível para novos projetos"<br>
+        }<br><br>
+        <span class="prompt">$</span> <span class="cursor">|</span>
+      </div>
+      <div class="contact-grid fade-in">
+        <a href="https://wa.me/5511959377959" target="_blank" class="contact-card wa">
+          <i class="devicon-whatsapp-plain"></i>
+          <div class="card-info">
+            <span class="label">WhatsApp</span>
+            <span class="value">Conversar agora</span>
+          </div>
+        </a>
+        <a href="mailto:fabriciodgalvao@gmail.com" class="contact-card mail">
+          <i class="devicon-google-plain"></i>
+          <div class="card-info">
+            <span class="label">E-mail</span>
+            <span class="value">fabriciodgalvao@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/fabricio-dias-galvao" target="_blank" class="contact-card ln">
+          <i class="devicon-linkedin-plain"></i>
+          <div class="card-info">
+            <span class="label">LinkedIn</span>
+            <span class="value">fabricio-dias-galvao</span>
+          </div>
+        </a>
+        <a href="https://github.com/fabricioply" target="_blank" class="contact-card gh">
+          <i class="devicon-github-original"></i>
+          <div class="card-info">
+            <span class="label">GitHub</span>
+            <span class="value">fabricioply</span>
+          </div>
+        </a>
+      </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Fabricio Dias Galvão.</p>
+      <div class="footer-line"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
