@@ -31,7 +31,9 @@ img{max-width:100%;display:block}
 /* Nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;background:rgba(6,6,15,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:var(--ease)}
 .nav.scrolled{padding:10px 32px;box-shadow:0 2px 30px rgba(0,229,255,.04)}
-.nav-logo{font-family:var(--display);font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-1px}
+.nav-logo{display:flex;align-items:center;transition:var(--ease)}
+.nav-logo:hover{transform:scale(1.05)}
+.nav-logo img{height:32px;width:auto;border-radius:4px;filter:drop-shadow(0 0 10px rgba(0,229,255,0.3))}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{font-size:.8rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;position:relative;padding-bottom:4px}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--cyan);transition:width var(--ease)}
