@@ -25,7 +25,16 @@
   const nav=document.querySelector('.nav'),tog=document.querySelector('.nav-toggle'),lnk=document.querySelector('.nav-links');
   if(!nav)return;
   addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
-  if(tog&&lnk){tog.addEventListener('click',()=>lnk.classList.toggle('active'));lnk.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>lnk.classList.remove('active')))}
+  if(tog&&lnk){
+    tog.addEventListener('click',()=>{
+      lnk.classList.toggle('active');
+      tog.classList.toggle('active');
+    });
+    lnk.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      lnk.classList.remove('active');
+      tog.classList.remove('active');
+    }));
+  }
 })();
 
 // --- Scroll Reveal ---
@@ -85,15 +94,17 @@
   function setupDrag(card,likeEl,nopeEl){
     let sx=0,cx=0,dragging=false;
     function start(e){dragging=true;sx=e.type.includes('mouse')?e.clientX:e.touches[0].clientX;card.style.transition='none'}
-    function move(e){if(!dragging)return;const x=(e.type.includes('mouse')?e.clientX:e.touches[0].clientX)-sx;cx=x;
+    function move(e){if(!dragging)return;
+      if(e.type === 'touchmove') e.preventDefault();
+      const x=(e.type.includes('mouse')?e.clientX:e.touches[0].clientX)-sx;cx=x;
       card.style.transform=`translateX(${x}px) rotate(${x*.08}deg)`;
       if(x>0){likeEl.style.opacity=Math.min(Math.abs(x)/80,1);nopeEl.style.opacity=0}else{nopeEl.style.opacity=Math.min(Math.abs(x)/80,1);likeEl.style.opacity=0}}
     function end(){if(!dragging)return;dragging=false;card.style.transition='transform .3s ease,opacity .3s ease';
       if(Math.abs(cx)>80){card.style.transform=`translateX(${cx>0?500:-500}px) rotate(${cx>0?30:-30}deg)`;card.style.opacity='0';
         setTimeout(()=>{idx++;renderCards()},300)}
       else{card.style.transform='';likeEl.style.opacity=0;nopeEl.style.opacity=0}cx=0}
-    card.addEventListener('mousedown',start);card.addEventListener('touchstart',start,{passive:true});
-    addEventListener('mousemove',move);addEventListener('touchmove',move,{passive:true});
+    card.addEventListener('mousedown',start);card.addEventListener('touchstart',start,{passive:false});
+    addEventListener('mousemove',move);addEventListener('touchmove',move,{passive:false});
     addEventListener('mouseup',end);addEventListener('touchend',end);
   }
   renderCards();
